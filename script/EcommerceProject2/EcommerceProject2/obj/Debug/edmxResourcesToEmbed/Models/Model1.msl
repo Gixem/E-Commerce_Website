@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerceDBModelStoreContainer" CdmEntityContainer="EcommerceDBEntities2">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+          <ScalarProperty Name="Admin_name" ColumnName="Admin_name" />
+          <ScalarProperty Name="Admin_pssw" ColumnName="Admin_pssw" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+          <ScalarProperty Name="Category_name" ColumnName="Category_name" />
+          <ScalarProperty Name="Category_image" ColumnName="Category_image" />
+          <ScalarProperty Name="Category_Desc" ColumnName="Category_Desc" />
+          <ScalarProperty Name="Category_admin_id" ColumnName="Category_admin_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coupons">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Coupon">
+        <MappingFragment StoreEntitySet="Coupons">
+          <ScalarProperty Name="Coupon_id" ColumnName="Coupon_id" />
+          <ScalarProperty Name="Coupon_Code" ColumnName="Coupon_Code" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventory_Table">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Inventory_Table">
+        <MappingFragment StoreEntitySet="Inventory_Table">
+          <ScalarProperty Name="Inventory_id" ColumnName="Inventory_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Cart_Table">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Order_Cart_Table">
+        <MappingFragment StoreEntitySet="Order_Cart_Table">
+          <ScalarProperty Name="Order_Cart_id" ColumnName="Order_Cart_id" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="Order_Total" ColumnName="Order_Total" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="size" ColumnName="size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Table">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Order_Table">
+        <MappingFragment StoreEntitySet="Order_Table">
+          <ScalarProperty Name="Order_id" ColumnName="Order_id" />
+          <ScalarProperty Name="Order_Cart_id" ColumnName="Order_Cart_id" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Order_date" ColumnName="Order_date" />
+          <ScalarProperty Name="size" ColumnName="size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="Product_name" ColumnName="Product_name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Category_id" ColumnName="Category_id" />
+          <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reviews">
+      <EntityTypeMapping TypeName="EcommerceDBModel.Review">
+        <MappingFragment StoreEntitySet="Reviews">
+          <ScalarProperty Name="Review_id" ColumnName="Review_id" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
